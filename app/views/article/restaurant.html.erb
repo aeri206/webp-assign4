@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>식도락</title>
+    </head>
+    <body id="restaurant">
+        <%= render partial: "header" %>
+        <div id="contents">
+            <div id="sidebar">
+                <nav class="nav flex-column">
+                    <%= link_to "Seoul, Korea", "#Korea", :class=>"nav-link" %>
+                    <%= link_to "Portugal", "#Portugal", :class=>"nav-link" %>
+                    <%= link_to "Spain", "#Spain", :class=>"nav-link" %>
+                </nav>
+            </div>
+        <h2 class="chapter-title">맛집 목록
+        <%= link_to "  첫 페이지로 돌아가기   ", root_path, class: "font-small" %><span class="font-small"> / </span>
+        <%= link_to "도시목록으로 돌아가기", article_city_path,  class: "font-small" %></h2>
+        <div id="add-restaurant">
+        <%= link_to "새 맛집 추가하기", restaurant_new_path,  class: "font-small" %><br>
+        </div>
+        <h3 id="Korea" class="city">Seoul, Korea  
+        <%= link_to "TOP", "#contents", :class=>"font-small" %></h3>
+        <p class="city-sub">여행지도 아니고 서울출신도 아니지만 친구가 놀러오면 맛있다고 추천할 수 있는 곳!</p>
+        <ul class="city-description">
+                <li>초밥을 부탁해 - 개인적으로 설입 초밥 No.1 뭘먹어도 탱글탱글한 초밥 최고</li>
+                <li>스테이크가 함바 - 여기가면 아웃백은 다시 못감.</li>
+                <li>프랑스 홍합집</li>
+                <li>다이히로 - 집 근처이지만 적당한 밑반찬과 간단한 가정식</li>
+                <li>조선펍에디 - 신기한 칵테일 천국</li>
+                <li>엘 따삐오 - 하몽이 찐으로 맛있다!</li>
+                <li>행운당 - 인생 크로아상..</li>
+                <% @kr.each do |r| %>
+                    <li><%= r.name + ' - ' + r.description%></li>
+                <% end %>
+                </ul>
+                <div class="city-img">
+                    <%= image_tag "https://postfiles.pstatic.net/MjAxNzEyMTdfMjUw/MDAxNTEzNDgwNTAwMjc4.CjfkLjSeWnw1btTxy5Ut__rmglL0dOBTDJmmNyOSA-0g.nbp1sWMLtUNmol9GVNzHyiWIkGjgQ0TIKzHMqrJ2D6Ug.JPEG.kelly8022/output_115072276.jpg?type=w966", :class=>"rounded", :title=>"초밥을 부탁해" %>
+                    <%= image_tag "http://ldb.phinf.naver.net/20180111_280/1515657036170R8yIk_JPEG/rKDgYYPSlTpSeX7gzoSskbIU.JPG.jpg", :class=>"rounded", :title=>"스테이크가 함바" %>
+                    <%= image_tag 'https://postfiles.pstatic.net/MjAyMDAxMTVfMTc0/MDAxNTc5MDc5OTYxODg2.tWZvYshGDKH3a6YXltOufS86SYynpkLBAS5Vxtpx-kgg.BdJ4J8pW3OljH92AXzjdhP6CC85D6OZyLx2X14JzMtIg.JPEG.jina0916/1579079961179.jpg?type=w773', :class=>"rounded" %>
+                    <%= image_tag "https://postfiles.pstatic.net/MjAxOTExMTBfMjQ0/MDAxNTczMzcwODY0MDMy.Yl0paKKeTqd-kESANk9MjtRJ5vSlUSmozejv6Y8ZECAg.iHxCEXFGYKtJFhJXz2XXpC9iLkDWS71pQe-RVp27a7kg.JPEG.mapark0214/DSC04453.JPG?type=w773", :title=>"조선펍에디", :class=>"rounded" %>
+                    <%= image_tag "https://postfiles.pstatic.net/MjAxOTExMDJfMjI5/MDAxNTcyNzAxNDk3MjMy.Mll3ODgoGVyOtCvYYUdVTv0MQrPUiWg7M4EUcHNif_wg.AW512rJrBnb9LSUh0qTh-YzMuMh8psvIXq6PoRHBwrgg.JPEG.dnjsifjqjd/20191101_131546.jpg?type=w966", :class=>"rounded", :title=>"다이히로" %>
+                    <% @kr.each do |r| %>
+                        <% if r.img_url != nil %>
+                        <%= image_tag r.img_url, :class=>"rounded", :title=>r.name %>
+                        <% end %>
+                    <% end %>
+                </div>
+                <h3 id="Portugal" class="city">Portugal  <%= link_to "TOP", "#contents", :class=>"font-small" %></h3>
+                <p class="city-sub">개인적으로 여행지 중 음식과 분위기와 자연을 고루고루 갖춘 최고의 여행지..b</p>
+                <ul class="city-description">
+                    <li>Lisboa - Taverna Alfacinha - 유럽에서 느끼는 한국의 맛. 문어가 살아숨쉬는 문어밥</li>
+                    <li>Lisboa - Santelmo - 이동네는 아마도 문어맛집인것 같다. 문어 한마리 다 먹으면 조금 느끼하긴 하지만 올리브유는 아주 싱싱하다</li>
+                    <li>Lisboa - Pastéis de Belém - 에그타르트의 원조. 원조는 역시..</li>
+                    <li>Poto - La Maison Rouge 48 - Douro & Porto Wine Bar</li>
+                    <li>Porto - 4 Royal - 포르투갈의 데이트 코스같은 분위기 좋은 맛집. 그치만 난 혼자..</li>
+                    <% @pt.each do |r| %>
+                        <li><%= r.name + ' - ' + r.description%></li>
+                    <% end %>
+                </ul>
+                <div class="city-img">
+                    <%= image_tag "https://lh5.googleusercontent.com/p/AF1QipOBtUOFLJqV9kKzNrqp9ilWnYU6BOfO1jpdHZ7C=w990-h800-p-k-no", :class=>"rounded", :title => "Taverna Alfacinha" %>
+                    <%= image_tag "https://lh5.googleusercontent.com/p/AF1QipPfOlgdCVBn__NqDvmRGAiaZw4i4cJVGfOa99y6=w397-h298-k-no", :class=>"rounded", :title =>"Santelmo" %>
+                    <%= image_tag "https://lh5.googleusercontent.com/p/AF1QipPNRGhG4Bx3GuzSnkmGVgkAcjpglxAeaXBIOac6=w228-h298-k-no", :class=>"rounded", :title=>"Pastéis de Belém" %>
+                    <%= image_tag "https://lh5.googleusercontent.com/p/AF1QipNqrXQw2g34rCVMVXuxjf8nO3mbGfiD_DM3dTrM=w397-h298-k-no", :class=>"rounded", :title=>"La Maison Rouge 48 - Douro & Porto Wine Bar" %>
+                    <%= image_tag "https://lh5.googleusercontent.com/p/AF1QipONP8POLzBkk1rFEs8YEOO-tAZaWEbywmKNSo3Y=w613-h298-k-no", :class=>"rounded", :title=>"4 Royal" %>
+                    <% @pt.each do |r| %>
+                        <% if r.img_url != nil %>
+                        <%= image_tag r.img_url, :class=>"rounded", :title=>r.name %>
+                        <% end %>
+                    <% end %>
+                    </div>
+                <h3 id="Spain" class="city">Spain  <%= link_to "TOP", "#contents", :class=>"font-small" %></h3>
+                <ul class="city-description">
+                    <li>Barcelona - Maestró - 수제맥주 샘플러가 맛있다. </li>
+                    <li>Barcelona - Bruc 33 Tapas - 어떤 타파스를 골라도 실패하지 않는곳. 그치만 조오금 비쌈</li>
+                    <li>Sevillia - Torres y García - 1인 3메뉴 가능. 그런데 딸기 모히또밖에 기억이 아나..</li>
+                    <li>Barcelona - Ugot Bruncherie - 전통적인 스페인 음식은 아니지만 맛있는 브런치까페</li>
+                    <% @es.each do |r| %>
+                        <li><%= r.name + ' - ' + r.description%></li>
+                    <% end %>
+                </ul>
+                <div class="city-img">
+                    <%= image_tag "http://lh3.googleusercontent.com/-3YpWE8nPWSc/WngyuQ_BF5I/AAAAAAAAD8c/x6uDaSYGk8Arho83XNb6ZubN9zeuJnK9gCLIBGAYYCw/w447-h298-k-no/", :class=>"rounded", :title=>"Maestró" %>
+                    <%= image_tag "https://c.tfstatic.com/w_656,h_368,c_fill,g_auto:subject,q_auto,f_auto/restaurant_photos/446/15446/source/bruc-33-tapas-bruc-33-tapas-7-29219.jpg", :class=>"rounded", :title=>"Bruc 33 Tapas" %>
+                    <%= image_tag "https://lh5.googleusercontent.com/p/AF1QipNbkiqhwMgEv32qH4x9zdt53KMO4Q9YjBt7QSvt=w397-h298-k-no", :class=>"rounded", :title => "Torres y García" %>
+                    <%= image_tag "https://media-cdn.tripadvisor.com/media/photo-p/17/db/73/c9/ugot-bruncherie.jpg", :class=>"rounded", :title=>"Ugot Bruncherie" %>
+                    <% @es.each do |r| %>
+                        <% if r.img_url != nil %>
+                        <%= image_tag r.img_url, :class=>"rounded", :title=>r.name %>
+                        <% end %>
+                    <% end %>
+                </div>
+            </div>
+            
+        </body>
+        </html>

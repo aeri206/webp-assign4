@@ -1,0 +1,114 @@
+// Place all the styles related to the Article controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+	font-family: 'Noto Sans KR', sans-serif !important;
+	margin-bottom: 50px;
+}
+h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+	display: block;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+#header {
+	height: 300px;
+	background-image:url("header.jpg");
+	background-position: center;
+	background-size: cover;
+	>div#line {
+		margin: auto;
+		width: 8%;
+		padding-top: 65px;
+		border-bottom: 2px solid white;
+	}
+	>h1 {
+		font-weight: lighter;
+		color: white;
+		text-align: center;
+		margin: 10px 0 140px;
+		font-size: 2em;
+	}
+	>h4 {
+		text-align: right;
+		color: white;
+		margin-right: 10px;
+		font-weight: normal;
+		font-size: 1rem;
+	}
+}
+.chapter-title {
+	color: #e76d57;
+	margin-left: 20px;
+	~ {
+		p {
+			em {
+				color: #98341d;
+			}
+		}
+	}
+}
+.chapter-link {
+	text-decoration: none;
+	color: #ca2773;
+}
+span.strike {
+	text-decoration: line-through;
+	font-size: small;
+	color: black;
+	font-weight: 300;
+}
+.font-small {
+	font-size: small;
+}
+table {
+	width: 95% !important;
+}
+table.table {
+	td {
+		vertical-align: middle !important;
+	}
+}
+#restaurant {
+	.city-sub {
+		font-weight: lighter;
+		font-size: small;
+	}
+	#contents {
+		height: 1500px;
+	}
+}
+img.rounded {
+	height: 160px;
+}
+ul.city-description {
+	padding-inline-start: 200px;
+}
+div.city-img {
+	margin: 10px 30px 30px;
+}
+#contents {
+	margin: 15px;
+}
+#city {
+	caption {
+		a {
+			text-decoration: none !important;
+		}
+	}
+}
+#sidebar {
+	float: left;
+	width: 150px;
+	margin-right: 10px;
+	height: 1500px;
+}
+div#sidebar {
+	a {
+		color: black;
+		border-bottom: 1px solid #dee2e6;
+	}
+}

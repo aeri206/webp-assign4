@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>식도락</title>
+    </head>
+    <body id="city">
+        <%= render partial: "header" %>
+        <div id="contents">
+        <h2 class="chapter-title">식도락을 위한 도시들  
+        <%= link_to "  첫 페이지로 돌아가기   ", root_path, class: "font-small" %><span class="font-small"><br><span class="strike">물론 언제나 예외는 있음</span></h2>
+        <table align="center" class="table table-bordered text-center">
+            <caption>Go to 
+            <%= link_to "TripAdvisor", "https://www.tripadvisor.co.kr/", :class=>"text-success", :target=>"_blank" %> ☞ 
+                <span>
+                    <%= link_to "Seoul", "https://www.tripadvisor.co.kr/Restaurants-g294197-Seoul.html", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Seville", "https://www.tripadvisor.co.kr/Restaurants-g187443-Seville_Province_of_Seville_Andalucia.html", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Barcelona", "https://www.tripadvisor.co.kr/Restaurants-g187497-Barcelona_Catalonia.html", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Granada", "https://www.tripadvisor.co.kr/Restaurants-g187441-Granada_Province_of_Granada_Andalucia.html", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Lisboa", "ttps://www.tripadvisor.co.kr/Restaurants-g189158-Lisbon_Lisbon_District_Central_Portugal.html", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Porto", "https://www.tripadvisor.co.kr/Restaurants-g189180-Porto_Porto_District_Northern_Portugal.html", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Brussel", "https://www.tripadvisor.co.kr/Restaurants-g188644-Brussels.html", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Amsterdam", "https://www.tripadvisor.co.kr/Restaurants-g188590-Amsterdam_North_Holland_Province.html", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Dubrovnik", "https://www.tripadvisor.co.kr/Restaurants-g295371-Dubrovnik_Dubrovnik_Neretva_County_Dalmatia.html", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Macao", "https://www.tripadvisor.co.kr/Restaurants-g664891-Macau.html", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Taibei", "https://www.tripadvisor.co.kr/Restaurants-g293910-Taiwan.html", :class=>"text-success", :target=>"_blank" %>
+                </span>
+                <br/>
+                Go to 
+                <%= link_to "Google Maps", "https://www.google.com/maps", :class=>"text-success", :target=>"_blank" %> ☞ 
+                <span>
+                    <%= link_to "Seoul", "https://goo.gl/maps/3JfeUGvpY9YQnQNz9", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Seville", "https://goo.gl/maps/KCr1ruZ4Sza8SQgM9", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Barcelona", "https://goo.gl/maps/umT8nJZ4CxfzmazG8", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Granada", "https://goo.gl/maps/TynoBKMjFmkkSKUd9", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Lisboa", "https://goo.gl/maps/hqMKjkZDkGg56aN58", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Porto", "https://goo.gl/maps/a2vEphYEDYkjvQ4t6", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Brussel", "https://goo.gl/maps/8TwsRbmaEBKzPmiQ8", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Amsterdam","https://goo.gl/maps/tQm94Lm3yC9fjCJW6",  :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Dubrovnik", "ttps://goo.gl/maps/dYVC45bu32EZacjp8", :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Macao","https://goo.gl/maps/6kgbGty9GaqVxS8f8",  :class=>"text-success", :target=>"_blank" %> / 
+                    <%= link_to "Taibei","https://goo.gl/maps/vkkHzAcAgmjKCGu68", :class=>"text-success", :target=>"_blank" %>
+                </span>
+            </caption>
+            <thead class="thead-dark">
+                    <tr>
+                    <th style="width:10%;">국가</th>
+                    <th style="width:10%;">도시</th>
+                    <th style="width:7%;">만족도</th>
+                    <th style="width:20%;">대표음식</th>
+                    <th>이유</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= link_to "대한민국", article_restaurant_path(anchor: "Korea"), :class=>"text-decoration-none" %></td>
+                    <td>서울</td>
+                    <td>8.5</td>
+                    <td colspan="2">대표음식 생략. 오만 나라 음식이 다 있음. 웬만하면 비헹기 안타고 음식으로 세계일주 가능. <br>물론 식도락도 정말 좋지만 귀국 후 인천공항에서 먹는 김치찌개는 최고. <br>지방출신으로서, 상대적으로 비싼 서울의 밥값과 아직 서울에서 맛있는 김치를 찾지 못했기에 -1.5점
+                     </td>
+                </tr>
+                <tr >
+                    <td rowspan="3"><%= link_to "스페인", article_restaurant_path(anchor: "Spain"), :class=>"text-decoration-none" %></td>
+                    <td>세비야</td>
+                    <td>7.5</td>
+                    <td rowspan="3"> 빠에야, 타파스, 샹그리아, 하몽, 외</td>
+                    <td> 적당한 가격과 깔끔한 타파스가 가득해서 하루종일 먹고놀기에 좋았다. </td>
+                </tr>
+                <tr >
+                    <td>바르셀로나</td>
+                    <td>6.5</td>
+                    <td> 다양한 음식을 파는 펍과 음식점이 아주 많다! </td>
+                </tr>
+                <tr >
+                    <td>그라나다</td>
+                    <td>6</td>
+                    <td> 스페인 남부에서는 술 한잔을 시켜도 기본 안주(타파스)를 무료로 준다! 마치 한국의 술집같다..</td>
+                </tr>
+                <tr >
+                    <td><%= link_to "포르투갈", article_restaurant_path(anchor: "Portugal"), :class=>"text-decoration-none" %></td>
+                    <td>리스본<br>포르투</td>
+                    <td>8</td>
+                    <td>에그타르트, Polpo (문어), Bacalhau (대구) 요리, 체리주, 포트와인</td>
+                    <td>유럽여행을 하면서 잃어버린 미식을 되찾아오는 느낌이랄까. 그래도 가장 맵고 자극적인 한국의 맛을 찾아온것 같다. 에그타르트는 부들부들한것이 단연 최고이다. 산지직송해서 한국에서 팔아줬으면 좋겠다. 도우강변의 와인 양조장에서는 꼭 와이너리 투어를 하는걸로..!</td>
+                </tr>
+                <tr >
+                    <td>벨기에</td>
+                    <td>브뤼셀</td>
+                    <td>5</td>
+                    <td>와플, 감자튀김, 홍합요리</td>
+                    <td>메인 음식이 뭐가 맛있었는지는 기억이 잘 안나지만 감자요리와 인생와플을 맛본곳! 괜히 벨기에와플이라는 말이 있는건 아닌것 같다. </td>
+                </tr>
+                <tr >
+                    <td>네덜란드</td>
+                    <td>암스테르담</td>
+                    <td>4</td>
+                    <td>치즈, 감자..?</td>
+                    <td>대표음식이 뭐가 있는지는 잘 모르겠다. 식도락이랑은 별로 안 어울리는 것 같은데 간간히 맛있는 구황작물이 존재한다.</td>
+                </tr>
+                <tr >
+                    <td>크로아티아</td>
+                    <td>두브로브니크</td>
+                    <td>4</td>
+                    <td>해산물, 올리브</td>
+                    <td>역시 식도락이랑은 조-금 거리가 멀지만  지중해랑 인접해있어서 해산물이 싱싱했다. 그치만 음식을 바라고 여행가기는 조금 무리가 있는것 같은 나라.. </td>
+                </tr>
+                <tr >
+                    <td colspan="2">마카오</td>
+                    <td>6.5</td>
+                    <td>에그타르트, 딤섬, 꼬치</td>
+                    <td>맛있는 중국음식 + 포르투갈 음식 정도..? 간혹 허를 찌르는 고수만 아니면 괜찮았다. 포르투갈 음식에 고수를 첨가한 느낌이랄까. 세상에 문어샐러드에 고수가 들어있을 줄 누가 알았을까..에그타르트도 정말 맛있었다. </td>
+                </tr>
+                <tr>
+                    <td>대만</td>
+                    <td>타이베이</td>
+                    <td>5</td>
+                    <td>버블티, 지파이, 우육면, 훠거</td>
+                    <td>중화권 음식에서 살짝 향신료를 뺴서 먹을만 한 여행지..? 는 개인적으로 향신료를 별로 안좋아해서 중화권+동남아에서는 맛있게 먹은 기억이 잘 없다 그치만 같이간 친구는 극찬을 했으니 향신료에 개이치 않는다면 가볼만 하지 않을까</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<body id="add">
+        <%= render partial: "article/header" %>
+        <div id="contents">
+        <h2 class="chapter-title">새 맛집 추가하기
+        <%= link_to "  첫 페이지로 돌아가기   ", root_path, class: "font-small" %><span class="font-small"><span class="font-small"> / </span>
+        <%= link_to "맛집목록으로 돌아가기", article_restaurant_path,  class: "font-small" %><br></h2>
+        </div>
+
+                <%= form_for :restaurant, url:"/restaurant/new" do |f| %>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                        <%= f.label :city, "City", :class=>"input-group-text" %>
+                        </div>
+                    <%= f.select :city, ['Seoul', 'Portugal', 'Spain'],{}, {:class=>"custom-select"}%>
+                    </div>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">식당 이름</span>
+                    </div>
+                    <%= f.text_field :name, {:class=>"form-control", :placeholder=>"필수입력값입니다"} %>
+                    </div>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" >식당 설명</span>
+                    </div>
+                    <%= f.text_field :description, {:class=>"form-control", :placeholder=>"필수입력값입니다"} %>
+                    </div>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">이미지 url</span>
+                    </div>
+                    <%= f.text_field :img_url, {:class=>"form-control"} %>
+                    </div>
+                    <%= f.submit class:"btn btn-secondary" %>
+                    <% end %>
+                    </body>

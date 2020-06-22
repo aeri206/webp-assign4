@@ -1,0 +1,33 @@
+// Place all the styles related to the restaurant controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+body#add div.input-group-prepend {
+    width: 10%;
+}
+
+body#add div.input-group-prepend > * {
+    width:100%;
+    text-align:center;
+    place-content:center;
+}
+
+body#add > form > input.btn {
+    float:right;
+}
+
+div.field_with_errors {
+    width:90%;
+}
+div.input-group > div.field_with_errors > input.form-control::placeholder {
+    color:red;
+    opacity:0.8;
+}
+div.input-group > input.form-control::placeholder {
+    opacity:0;
+}
+
+div.field_with_errors > input {
+    border : 1px solid red;
+}
